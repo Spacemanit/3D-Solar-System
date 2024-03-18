@@ -45,13 +45,14 @@ def plotting():
     ts = load.timescale()
     xlim, ylim, zlim = (-10, 10), (-10, 10), (-10, 10)
     while True:
-        day += 1
+        day += dps.get()
         elev, azim = ax.elev, ax.azim
         if day >= int(tld.get()):
             ax.cla()
             day = 0
-        nw = nw + dt.timedelta(days=1)
+        nw = nw + dt.timedelta(days=(dps.get()))
         t = ts.from_datetime(nw)
+        print(nw)
         for i in planets:
             astrometric = i[1].at(t)
             x, y, z = astrometric.position.au
@@ -63,7 +64,7 @@ def plotting():
         if not plt.fignum_exists(fig.number):
             break
         plt.draw()
-        plt.pause(0.1)
+        plt.pause(1)
         xlim, ylim, zlim = ax.get_xlim(), ax.get_ylim(), ax.get_zlim()
 
 root = Tk()
@@ -95,7 +96,12 @@ l2 = Label(root, text = "Point Size", width=21, height=1, bg="grey", fg="black",
 l2.grid(row=4, column=0, columnspan=2)
 pst = Scale(root, variable = v1, from_=0, to=100, font=Font(family="Space Odyssey", size=20) , orient="horizontal")   
 pst.grid(row=4, column=2)
+l3 = Label(root, text = "Speed (days/s)", width=21, height=1, bg="grey", fg="black", font=Font(family="Space Odyssey", size=20)) 
+l3.grid(row=5, column=0, columnspan=2)
+dps = Scale(root, variable = v1, from_=0, to=100, font=Font(family="Space Odyssey", size=20) , orient="horizontal")   
+dps.grid(row=5, column=2)
 Strt = Button(root, width=9, height=1, bg="red", fg="white", font=Font(family="Space Odyssey", size=20) ,text = "Start", command = lambda:plotting())
-Strt.grid(row=5, column=1, padx=15, pady=10)
-
+Strt.grid(row=6, column=1, padx=15, pady=10)
+openother = Button(root, width=18, height=1, bg="red", fg="white", font=Font(family="Space Odyssey", size=20) ,text = "Geocentric view", command = lambda:open("geocentric view.py"))
+openother.grid(row=6, column=2, columnspan=2)
 root.mainloop()
