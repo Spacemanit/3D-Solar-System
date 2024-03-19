@@ -6,7 +6,6 @@ This project contains the code and data necessary to create a 3D map of the sola
 ## Features
 - **Interactive 3D Visualization**: Users can explore the solar system in three dimensions, zooming in and out and rotating the view to see different angles.
 - **Accurate Positioning**: The map uses real data to accurately represent the positions of the planets and other celestial bodies.
-- **Educational Information**: Each planet and object comes with informational text to provide users with knowledge about our solar system.
 
 ## How to Use
 To use the 3D map, simply run the `solar system 3d.py` script in a Python environment. Ensure that all dependencies are installed as per the requirements file.
