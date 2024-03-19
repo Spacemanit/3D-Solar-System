@@ -34,7 +34,6 @@ pstvar = IntVar()
 dpsvar = IntVar()
 paused = False
 
-
 def add(st, button):
     global p
     if button.cget("bg") == "red":
@@ -43,7 +42,6 @@ def add(st, button):
     else:
         button.config(bg="red")
         p.remove(st)
-
 
 def plotting():
     global p, paused
@@ -96,7 +94,6 @@ def plotting():
         plt.pause(0.1)
         elev, azim = ax.elev, ax.azim
         xlim, ylim, zlim = ax.get_xlim(), ax.get_ylim(), ax.get_zlim()
-
 
 Mer = Button(
     root,
