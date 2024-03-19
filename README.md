@@ -16,6 +16,7 @@ To use the 3D map, simply run the `solar system 3d.py` script in a Python enviro
 - Necessary Python libraries: Available on requirements.txt
 
 ## Installation
+Download all files in a folder, or,
 Clone the repository to your local machine using the following command:
 git clone https://github.com/Spacemanit1709/3D-map-of-solar-system.git
 
