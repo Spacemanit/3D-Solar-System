@@ -13,16 +13,15 @@ To use the 3D map, simply run the `solar system 3d.py` script in a Python enviro
 
 ## Requirements
 - Python 3.x
-- Necessary Python libraries: [list libraries here]
+- Necessary Python libraries: Available on requirements.txt
 
 ## Installation
 Clone the repository to your local machine using the following command:
 git clone https://github.com/Spacemanit1709/3D-map-of-solar-system.git
 
-Install the required libraries using:
+Install the required libraries using: `pip install -r requirements.txt`
 
-pip install -r requirements.txt
-
+Run `solar system 3d.py`
 
 ## Contributing
 Contributions to the 3D map of the solar system are welcome. Please fork the repository, make your changes, and submit a pull request.
@@ -31,6 +30,6 @@ Contributions to the 3D map of the solar system are welcome. Please fork the rep
 This project is licensed under the MIT License.
 
 ## Acknowledgments
-- Inspired by interactive star maps
+Inspired by interactive star maps
 
 Thank you for exploring the 3D map of the solar system!
