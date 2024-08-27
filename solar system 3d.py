@@ -212,6 +212,7 @@ tld = Scale(
     variable=tldvar,
     from_=0,
     to=732,
+    length=150,
     font=Font(family="Space Odyssey", size=20),
     orient="horizontal",
 )
@@ -231,6 +232,7 @@ pst = Scale(
     variable=pstvar,
     from_=0,
     to=100,
+    length=150,
     font=Font(family="Space Odyssey", size=20),
     orient="horizontal",
 )
@@ -251,6 +253,7 @@ dps = Scale(
     variable=dpsvar,
     from_=0,
     to=200,
+    length=150,
     font=Font(family="Space Odyssey", size=20),
     orient="horizontal",
 )
